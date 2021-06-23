@@ -10,14 +10,35 @@
 
 header{
     grid-area: header;
-
+    position: relative;
 }
+
+
 
 #bg{
     grid-area: left;
     background: url('../assets/img-bg.svg') no-repeat top/contain;
     background-position-x: -10rem;
+    animation-name: bounce;
+    animation-duration: 3.5s;
+    position: relative;
+    animation-iteration-count:infinite;
+    
 }
+
+@keyframes bounce {
+    0%{
+        top: 0px;
+    }
+    50%{
+        top: -10px;
+    }
+    100%{
+        top: 0px;
+    }
+}
+    
+
 
 main{
     grid-area: right;
