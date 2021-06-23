@@ -10,7 +10,7 @@ html{
     --black:#0D114F;
     --red:#E83F5B;
     --white:#FAFAFA;
-    --lightBlue:#E0ECFF;
+    --light-blue:#E0ECFF;
     --blue:#3485FF;
     --background:#FBFCFF;
     --overlay:#040911;
@@ -18,11 +18,27 @@ html{
     --grey-dark:#4D5E77;
     --grey-blue:#A1B2CD;
     --grey-light:#E5EAF1;
+    --grey-medium:#eaecf2;
+
+
+    /* TEMA ESCURO */
+    --button-gradient-night:linear-gradient(111.08deg,
+    rgba(130,87,230,.4) -.03%,
+    rgba(71,99,255,.4) 51.55%,
+    rgba(4,211,97,.4));
+    
+    --button-gradient-night-webkit:-webkit-linear-gradient(
+        338.92deg
+        ,rgba(130,87,230,.4) -.03%,rgba(71,99,255,.4) 51.55%,rgba(4,211,97,.4));
+    --background-night: #121214;
+    --bg-large-night: url(https://nextlevelweek.com/images/platform/background.png);
+    --bg-small-night: url(https://nextlevelweek.com/images/platform/background-mobile.png);
 
     font-size: 62.5%;
 }
 
 body{
+    display: flex;
     height: 100vh;
     background: var(--background);
 
