@@ -17,7 +17,7 @@ header{
 
 #bg{
     grid-area: left;
-    background: url('../assets/img-bg.svg') no-repeat top/contain;
+    background: url('../images/img-bg.svg') no-repeat top/contain;
     background-position-x: -10rem;
     animation-name: bounce;
     animation-duration: 3.5s;
@@ -63,7 +63,7 @@ main h2{
 input{
     border: .2rem solid var(--grey-blue);
     padding: 0 1.6rem;
-    
+    outline: none;
 }
 
 input, button, .button{
