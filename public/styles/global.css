@@ -22,14 +22,15 @@ html{
 
 
     /* TEMA ESCURO */
-    --button-gradient-night:linear-gradient(111.08deg,
-    rgba(130,87,230,.4) -.03%,
-    rgba(71,99,255,.4) 51.55%,
-    rgba(4,211,97,.4));
+    --bg-gradient-night:linear-gradient(111.08deg,
+    rgba(130,87,230,.5) -.03%,
+    rgba(71,99,255,.5) 51.55%,
+    rgba(4,211,97,.5));
     
-    --button-gradient-night-webkit:-webkit-linear-gradient(
-        338.92deg
-        ,rgba(130,87,230,.4) -.03%,rgba(71,99,255,.4) 51.55%,rgba(4,211,97,.4));
+    --bg-gradient-night-desactive:linear-gradient(111.08deg,
+    rgba(130,87,230,.1) -.03%,
+    rgba(71,99,255,.1) 51.55%,
+    rgba(4,211,97,.1));
     --background-night: #121214;
     --bg-large-night: url(https://nextlevelweek.com/images/platform/background.png);
     --bg-small-night: url(https://nextlevelweek.com/images/platform/background-mobile.png);

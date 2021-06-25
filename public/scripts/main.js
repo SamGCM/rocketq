@@ -1,10 +1,14 @@
 import Modal from './modal.js'
 
+
 const modal =  Modal()
+
 
 const modalTitle = document.querySelector('.modal h2')
 const modalDescription = document.querySelector('.modal p')
 const modalButton = document.querySelector('.modal button')
+
+
 
 // PEGAR BOTÕES COM CLASSE CHECK
 const checkButtons = document.querySelectorAll('.actions a.check')

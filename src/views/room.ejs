@@ -13,20 +13,21 @@
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Poppins:wght@400;500;700&display=swap"rel="stylesheet">
         
         <script src="/scripts/main.js" defer type='module'></script>
+        <script src="/scripts/theme.js" defer type='module'></script>
     </head>
-    <body>
+    <body class="night-bg">
         <div id='room' class='content'>
             <header>
                 <a href="/">
-                    <img src="/images/Logo.svg" alt="Rocket.Q Logo" >
+                    <img class="night-logo" src="/images/Logo.svg" alt="Rocket.Q Logo" >
                 </a>
 
                 <div class="buttons">
-                    <div class="button outlined" id='room-id' data-id='323234'>
+                    <div class="button outlined night-button night-word" id='room-id' data-id='323234'>
                         #323243
-                        <img src="/images/copy 1.svg" alt='Copiar número da sala'>
+                        <img class="night-icon-copy" src="/images/copy 1.svg" alt='Copiar número da sala'>
                     </div>
-                    <a href="#" class="button">
+                    <a href="#" class="button night-button">
                         <img src="/images/usersWhite.svg" alt="Criar uma sala">
                         Criar Sala
                     </a>
@@ -38,14 +39,14 @@
                     <h2></h2>
                     <form action="">
                         <label class="sr-only" for-id='question' >O que você quer perguntar?</label>
-                        <textarea name='question' id="question" placeholder="O que você quer perguntar?"></textarea>
+                        <textarea class="night-word" name='question' id="question" placeholder="O que você quer perguntar?"></textarea>
                     
                         <footer>
                             <div>
                                 <img src="/images/lock_black_24dp 1.svg" alt="Cadeado">
                                 Esta pergunta é anônima
                             </div>
-                            <button>Enviar</button>
+                            <button class='night-button'>Enviar</button>
                         </footer>
                     </form>
                 </section>
@@ -55,42 +56,42 @@
 
                     <div class="questions">
 
-                        <div class="question-wrapper">
+                        <div class="question-wrapper night-bg-box">
                             <div class="question-content">
                                 <div class="user">
                                     <img src="/images/user 1.svg" alt="">
                                 </div>
                                 <div class="question">
-                                    <p>Qual a diferença entre const, var e let no Javascript?</p>
+                                    <p class="night-word">Qual a diferença entre const, var e let no Javascript?</p>
                                 </div>
                             </div>
                             <div class="actions">
-                                <a href="#" class="check" data-id="2">
+                                <a class="night-word" href="#" class="check" data-id="2">
                                     <img src="/images/check.svg" alt="Marcar como lida">
                                     Marcar como lida
                                 </a>
-                                <a href="#" class="delete" data-id="2">
+                                <a class="night-word" href="#" class="delete" data-id="2">
                                     <img src="/images/trash.svg" alt="Excluir">
                                     Excluir
                                 </a>
                             </div>
                         </div>
 
-                        <div class="question-wrapper">
+                        <div class="question-wrapper night-bg-box">
                             <div class="question-content">
                                 <div class="user">
                                     <img src="/images/user 1.svg" alt="">
                                 </div>
                                 <div class="question">
-                                    <p>O que é Javascript?</p>
+                                    <p class="night-word">O que é Javascript?</p>
                                 </div>
                             </div>
                             <div class="actions">
-                                <a href="#" class="check" data-id="3">
+                                <a class="night-word" href="#" class="check" data-id="3">
                                     <img src="/images/check.svg" alt="Marcar como lida">
                                     Marcar como lida
                                 </a>
-                                <a href="#" class="delete" data-id="3">
+                                <a class="night-word" href="#" class="delete" data-id="3">
                                     <img src="/images/trash.svg" alt="Excluir">
                                     Excluir
                                 </a>
@@ -99,17 +100,17 @@
 
                         
 
-                        <div class="question-wrapper read">
+                        <div class="question-wrapper read night-bg-desactive">
                             <div class="question-content">
                                 <div class="user">
                                     <img src="/images/user 1.svg" alt="">
                                 </div>
                                 <div class="question" data-id="1">
-                                    <p>O que é Typescript?</p>
+                                    <p class="night-word">O que é Typescript?</p>
                                 </div>
                             </div>
                             <div class="actions">
-                                <a href="#" class="delete" data-id="1">
+                                <a class="night-word" href="#" class="delete" data-id="1">
                                     <img src="/images/trash.svg" alt="Excluir">
                                     Excluir
                                 </a>
@@ -126,7 +127,7 @@
                                     <input type="password" id="password" name='password' placeholder="Digite sua senha" >
                                     
                                     <div class="buttons">
-                                        <div class="button grey cancel">Cancelar</div>
+                                        <div class="button grey cancel ">Cancelar</div>
                                         <button class='red'>Sim, excluir</button>
                                     </div>
                                 </form>
