@@ -22,12 +22,14 @@
                     <img class="night-logo" src="/images/Logo.svg" alt="Rocket.Q Logo" >
                 </a>
 
+                
+
                 <div class="buttons">
-                    <div class="button outlined night-button night-word" id='room-id' data-id='323234'>
-                        #323243
+                    <div class="button outlined night-button night-word" id='room-id' data-id="<%= roomId %>" >
+                        #<%= roomId %>
                         <img class="night-icon-copy" src="/images/copy 1.svg" alt='Copiar número da sala'>
                     </div>
-                    <a href="#" class="button night-button">
+                    <a href="/create-pass" class="button night-button">
                         <img src="/images/usersWhite.svg" alt="Criar uma sala">
                         Criar Sala
                     </a>
@@ -37,7 +39,7 @@
             <main>
                 <section id='question-form'>
                     <h2></h2>
-                    <form action="">
+                    <form action="/question/create/<%= roomId %>" method="POST">
                         <label class="sr-only" for-id='question' >O que você quer perguntar?</label>
                         <textarea class="night-word" name='question' id="question" placeholder="O que você quer perguntar?"></textarea>
                     
@@ -53,69 +55,57 @@
 
                 <section id='questions'>
                     <h2 class="sr-only">Perguntas da comunidade</h2>
-
                     <div class="questions">
 
-                        <div class="question-wrapper night-bg-box">
-                            <div class="question-content">
-                                <div class="user">
-                                    <img src="/images/user 1.svg" alt="">
-                                </div>
-                                <div class="question">
-                                    <p class="night-word">Qual a diferença entre const, var e let no Javascript?</p>
-                                </div>
-                            </div>
-                            <div class="actions">
-                                <a class="night-word" href="#" class="check" data-id="2">
-                                    <img src="/images/check.svg" alt="Marcar como lida">
-                                    Marcar como lida
-                                </a>
-                                <a class="night-word" href="#" class="delete" data-id="2">
-                                    <img src="/images/trash.svg" alt="Excluir">
-                                    Excluir
-                                </a>
-                            </div>
-                        </div>
+                        <% if(isNoQuestions){ %>
+                            <%- include('parts/no-question') %>
+                        <%} %>
 
-                        <div class="question-wrapper night-bg-box">
-                            <div class="question-content">
-                                <div class="user">
-                                    <img src="/images/user 1.svg" alt="">
+                        <% questions.forEach(question => { %>
+
+                            <div class="question-wrapper night-bg-box">
+                                <div class="question-content">
+                                    <div class="user">
+                                        <img src="/images/user 1.svg" alt="">
+                                    </div>
+                                    <div class="question">
+                                        <p class="night-word"><%= question.title  %></p>
+                                    </div>
                                 </div>
-                                <div class="question">
-                                    <p class="night-word">O que é Javascript?</p>
+                                <div class="actions">
+                                    <a href="#" class="check night-word" data-id="<%= question.id %>">
+                                        <img src="/images/check.svg" alt="Marcar como lida">
+                                        Marcar como lida
+                                    </a>
+                                    <a href="#" class="delete night-word" data-id="<%= question.id %>">
+                                        <img src="/images/trash.svg" alt="Excluir">
+                                        Excluir
+                                    </a>
                                 </div>
                             </div>
-                            <div class="actions">
-                                <a class="night-word" href="#" class="check" data-id="3">
-                                    <img src="/images/check.svg" alt="Marcar como lida">
-                                    Marcar como lida
-                                </a>
-                                <a class="night-word" href="#" class="delete" data-id="3">
-                                    <img src="/images/trash.svg" alt="Excluir">
-                                    Excluir
-                                </a>
+
+                        <%}); %>
+
+                        <% questionsRead.forEach(questionRead => {%>
+                            <div class="question-wrapper read night-bg-desactive">
+                                <div class="question-content">
+                                    <div class="user">
+                                        <img src="/images/user 1.svg" alt="">
+                                    </div>
+                                    <div class="question" data-id="1">
+                                        <p class="night-word"><%= questionRead.title %></p>
+                                    </div>
+                                </div>
+                                <div class="actions">
+                                    <a class="night-word" href="#" class="delete" data-id="<%= questionRead.id %>">
+                                        <img src="/images/trash.svg" alt="Excluir">
+                                        Excluir
+                                    </a>
+                                </div>
                             </div>
-                        </div>
+                        <% }) %>
 
                         
-
-                        <div class="question-wrapper read night-bg-desactive">
-                            <div class="question-content">
-                                <div class="user">
-                                    <img src="/images/user 1.svg" alt="">
-                                </div>
-                                <div class="question" data-id="1">
-                                    <p class="night-word">O que é Typescript?</p>
-                                </div>
-                            </div>
-                            <div class="actions">
-                                <a class="night-word" href="#" class="delete" data-id="1">
-                                    <img src="/images/trash.svg" alt="Excluir">
-                                    Excluir
-                                </a>
-                            </div>
-                        </div>
 
                         <div class="modal-wrapper">
                             <div class="modal">
@@ -131,6 +121,7 @@
                                         <button class='red'>Sim, excluir</button>
                                     </div>
                                 </form>
+
                             </div>
                         </div>
 
