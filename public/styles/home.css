@@ -8,17 +8,108 @@
     'left right'
 }
 
+/* .content{ NO MOBILE
+    display: grid;
+    grid-template-columns: 60% 40% ;
+    grid-template-rows: 11.4rem 1fr 1fr;
+    grid-template-areas:
+    'header header'
+    'left left'
+    'right right';
+}
+} */
+
 header{
     grid-area: header;
     position: relative;
+    display: flex;
+    align-items: center;
 }
+
+.toggle{
+    background: var(--grey-light);
+    border-radius: 30px;
+    width: min(50%, 6rem);
+    height: min(70%, 3.5rem);
+    display: flex;
+    align-items: center;
+    margin-left: 4rem;
+    
+}
+
+.toggle .circle {
+    background: var(--blue);
+    width: min(50%, 2rem);
+    height: min(70%, 3.5rem);
+    border-radius: 50%;
+    position: relative;
+    margin: 0 0.5rem;
+}
+
+.toggle .circle.night-mode {
+    animation-name: night-mode;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+}
+
+.toggle .circle.light-mode {
+    animation-name: light-mode;
+    animation-duration: 0.75s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes night-mode {
+    from{
+        background: var(--blue);
+        left: 0;
+    }
+    to{
+        background: var(--purple);
+        left: 50%;
+    }
+}
+
+@keyframes light-mode {
+    from{
+        background: var(--purple);
+        left: 50%;
+        left: 0;
+    }
+    to{
+        background: var(--blue);
+        left: 50%;
+        left: 0;
+    }
+}
+
+/* .toggle .circle{
+    background: var(--purple);
+    width: min(50%, 2rem);
+    height: min(70%, 3.5rem);
+    border-radius: 50%;
+    position: relative;
+    margin: 0 0.5rem;
+    animation-name: move;
+    animation-duration: 0.75s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes move {
+    from{
+        left: 0;
+    }
+    to{
+        left: 50%;
+    }
+} */
 
 
 
 #bg{
     grid-area: left;
     background: url('../images/img-bg.svg') no-repeat top/contain;
-    background-position-x: -10rem;
+    background-position-x: -10rem; 
+    /* background-position-x: -10rem; NO MOBILE */
     animation-name: bounce;
     animation-duration: 3.5s;
     position: relative;
@@ -45,7 +136,7 @@ main{
     top: -12rem;
     display: flex;
     align-items: center;
-
+    /* justify-content: center; no mobile   */
 }
 
 main .container{
@@ -65,6 +156,7 @@ input{
     padding: 0 1.6rem;
     outline: none;
 }
+
 
 input, button, .button{
     width: 100%;
@@ -116,4 +208,11 @@ input, button, .button{
 .ball.bottom{
     right: 5.6rem;
     bottom: -15rem;
+}
+
+
+
+.no-room p {
+    text-align: center;
+    font-size: 2.8rem;
 }

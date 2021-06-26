@@ -1,13 +1,22 @@
 let data = new Date()
 const hour = data.getHours()
 
+const toggle = document.querySelector('.toggle')
 
+const mode = document.querySelector('.circle')
 
-if(hour < 7 || hour > 18){
+toggle.addEventListener('click', (event) => handleClick(event, false)) 
 
-    //  --------------HOME--------------
+function handleClick(event, state){
+    event.preventDefault()
+    
 
+    
     const logo = document.querySelector('.night-logo')
+
+    const balls = document.querySelectorAll('.night-ball')
+
+    const bgSvg = document.querySelector('#bg')
 
     const bgBox = document.querySelectorAll('.night-bg-box')
 
@@ -22,9 +31,22 @@ if(hour < 7 || hour > 18){
     const word = document.querySelectorAll('.night-word')
 
 
+    
+
+    
+
+    bgSvg == null ? '' : bgSvg.style.setProperty('background', "url('../images/img-bg-night.svg') no-repeat top/contain")
+    bgSvg == null ? '' : bgSvg.style.setProperty('background-position-x', "-10rem")
+
     logo == null ? '' : logo.setAttribute('src', '/images/Logo white.svg')
 
+    
+
     iconCopy == null ? '' : iconCopy.setAttribute('src', '/images/copy white.svg')
+
+    balls.forEach(ball => {
+        ball.style.setProperty('background', '#8257E6')
+    })
 
     bgBox.forEach(background => {
         background.style.setProperty('background', 'var(--bg-gradient-night)')
@@ -52,6 +74,5 @@ if(hour < 7 || hour > 18){
         word.style.setProperty('color', 'var(--white)')
     })
 
-    
+    state ? mode.classList.add('light-mode') : mode.classList.add('night-mode')
 }
-    
