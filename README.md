@@ -2,7 +2,7 @@ RocketQ - Next Level Week Together
   
 ## Descrição
 Esta projeto foi desenvolvido durante o evento Next Level Week #Together da Rocketseat. 
-O Letmeask é uma solução para o gerenciamento de perguntas e respostas entre público e administrador em tempo real. Um exemplo de uso seria durante uma live o streamer enviar o link da sala para que seu público faça o envio das perguntas e acompanhe as respostas e curtidas das perguntas.
+O RocketQ é um site onde é possível a pessoa criar uma sala para receber perguntas anônimas, o dono da sala pode excluir e marca como lida as perguntas. 
 
 ## 💻📱 Preview
 <a href="https://www.linkedin.com/posts/samuel-gama-222a26188_no-v%C3%ADdeo-existe-uma-p%C3%A1gina-para-caso-a-pessoa-activity-6814506346432487424-2aPT">Acesse</a>
