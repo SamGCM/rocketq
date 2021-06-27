@@ -52,10 +52,20 @@ header{
     animation-fill-mode: forwards;
 }
 
-.toggle .circle.light-mode {
-    animation-name: light-mode;
+.toggle .circle.night-mode {
+    animation-name: night-mode;
     animation-duration: 0.3s;
     animation-fill-mode: forwards;
+}
+
+.toggle .circle.light-mode.view-night {
+    background: var(--purple);
+    left: 50%;
+}
+
+.toggle .circle.light-mode.view-light {
+    background: var(--blue);
+    left: 0;
 }
 
 @keyframes night-mode {
