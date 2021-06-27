@@ -54,7 +54,7 @@ header{
 
 .toggle .circle.light-mode {
     animation-name: light-mode;
-    animation-duration: 0.75s;
+    animation-duration: 0.3s;
     animation-fill-mode: forwards;
 }
 
@@ -73,11 +73,9 @@ header{
     from{
         background: var(--purple);
         left: 50%;
-        left: 0;
     }
     to{
         background: var(--blue);
-        left: 50%;
         left: 0;
     }
 }

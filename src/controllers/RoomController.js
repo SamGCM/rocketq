@@ -62,7 +62,7 @@ module.exports = {
             isRoom = roomsExistIds.some(roomExistId => roomExistId == roomId )
             
             if(!isRoom){
-                res.render(`/room-not-exist`)
+                res.redirect(`/room-not-exist`)
             }else{
                 res.redirect(`/room/${roomId}`)
             }

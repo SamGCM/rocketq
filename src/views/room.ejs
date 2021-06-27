@@ -65,7 +65,7 @@
 
                             <div class="question-wrapper night-bg-box">
                                 <div class="question-content">
-                                    <div class="user">
+                                    <div class="user night-user">
                                         <img src="/images/user 1.svg" alt="">
                                     </div>
                                     <div class="question">
@@ -92,12 +92,12 @@
                                     <div class="user">
                                         <img src="/images/user 1.svg" alt="">
                                     </div>
-                                    <div class="question" data-id="1">
+                                    <div class="question">
                                         <p class="night-word"><%= questionRead.title %></p>
                                     </div>
                                 </div>
                                 <div class="actions">
-                                    <a class="night-word" href="#" class="delete" data-id="<%= questionRead.id %>">
+                                    <a href="#" class="delete night-word" data-id="<%= questionRead.id %>">
                                         <img src="/images/trash.svg" alt="Excluir">
                                         Excluir
                                     </a>
@@ -118,7 +118,7 @@
                                     
                                     <div class="buttons">
                                         <div class="button grey cancel ">Cancelar</div>
-                                        <button class='red'>Sim, excluir</button>
+                                        <button class='red night-user'>Sim, excluir</button>
                                     </div>
                                 </form>
 
