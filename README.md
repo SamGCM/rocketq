@@ -1,4 +1,4 @@
-# 💜 Letmeask - Next Level Week Together 
+RocketQ - Next Level Week Together 
   
 ## Descrição
 Esta projeto foi desenvolvido durante o evento Next Level Week #Together da Rocketseat. 
